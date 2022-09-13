@@ -1,0 +1,12 @@
+package com.example.tdd.utils;
+
+import com.example.tdd.services.UserService;
+
+import java.util.function.Predicate;
+
+public class PhoneNumberValidator implements Predicate<String> {
+    @Override
+    public boolean test(String phoneNumber) {
+        return phoneNumber.startsWith("+212") && phoneNumber.length() == 13;
+    }
+}
